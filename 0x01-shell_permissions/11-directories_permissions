@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod +x /..
+chmod +x 0x01-shell_basics/..
