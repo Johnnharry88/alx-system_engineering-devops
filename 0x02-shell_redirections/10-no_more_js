@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -f mane *".js" .
+find . -type f -name "*.js" -delete
