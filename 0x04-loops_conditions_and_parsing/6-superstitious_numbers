@@ -7,7 +7,7 @@ do
 	case $rec in
 		4)
 			echo $rec
-			echo "bad luck form China"
+			echo "bad luck from China"
 			;;
 		9)
 			echo $rec
