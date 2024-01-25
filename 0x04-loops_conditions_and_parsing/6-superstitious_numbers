@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#Displays number from one to wewnty with exceptions @4, 9 and 17
+
+rec=1
+while [ $rec -le 20 ]
+do
+	case $rec in
+		4)
+			echo $rec
+			echo "bad luck form China"
+			;;
+		9)
+			echo $rec
+			echo "bad luck from Japan"
+			;;
+		17)
+			echo $rec
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo $rec
+			;;
+	esac
+	((rec=rec+1))
+done
