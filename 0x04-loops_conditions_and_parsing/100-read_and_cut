@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script that reads and displays content of file etc/passwd
+
+fi=/etc/passwd
+
+while read -r xty
+do
+	echo "$xty" | cut -d ':' -f 1,3,6
+done <"$fi"
