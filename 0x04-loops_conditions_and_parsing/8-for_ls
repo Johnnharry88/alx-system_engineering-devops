@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# A script that displays the content of directory
+
+for x in *
+do
+	echo "$x" | cut -f 2 -d "-"
+done
