@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Script that displays number 1 to 100 excepting mutiple
+# of three, five or fifteen
+
+rec=1
+while [ $rec -le 100 ]
+do
+	if [ $((rec%(3*5))) = 0 ]
+	then
+		echo "FizzBuzz"
+	elif [ $((rec%3)) = 0 ]
+	then
+		echo "Fizz"
+	elif [ $((rec%5)) = 0 ]
+	then
+		echo "Buxx"
+	else
+		echo "$rec"
+	fi
+	((rec++))
+done
