@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Shows Best School ten timee
+
+rec=9
+until [ $rec -lt 0 ]
+do
+	echo "Best School"
+	((rec-=1))
+done
