@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# kills the infinity and beyod program usig sigkill
+
+kill -SIGKILL "$(pgrep --full 7-highlander)"

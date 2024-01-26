@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# kills program that prints the infinity and beyond using sigkill signal
+
+kill -SIGTERM "$(pgrep --full 4-to_infinity_and_beyond)"
