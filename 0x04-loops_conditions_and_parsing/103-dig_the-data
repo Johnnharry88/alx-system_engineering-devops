@@ -1,0 +1,4 @@
+#1/usr/bin/env bash
+#Script that displays apache logs in a sorted order
+
+awk '{print $1,$9}' apache-access.log | osrt | uniq -c | sort -nr
