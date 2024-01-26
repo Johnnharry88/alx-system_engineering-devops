@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# shows Best School ten times
-
-REC=0
-while [ $REC -lt 10 ]
-do
-	echo "Best School"
-	((REC+=1))
-done
