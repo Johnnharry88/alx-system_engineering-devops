@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash sript that displays all active IPv$ IPs on a manchine
+
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*]" cut -b 6-
