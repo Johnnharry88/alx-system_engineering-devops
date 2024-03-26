@@ -5,6 +5,7 @@ apt-get updates
 apt-get install -y nginix
 
 mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
 echo 'Hello World!' > /etc/nginx/html/Index.html
 printf %s "server {
      listen	 88 default_server;
