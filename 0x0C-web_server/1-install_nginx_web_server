@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # installs Nginx with the stipulated guidelines
 
-apt-get updates
-apt-get install -y nginx
+sudo apt-get updates
+sudo apt-get install -y nginx
 
-mkdir /var/www/html
-touch /var/www/html/index.html
-echo 'Hello World!' > /var/www/html/index.html
+sudo mkdir /var/www/html
+sudo touch /var/www/html/index.html
+sudo echo 'Hello World!' > /var/www/html/index.html
 
 service nginx restart
