@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # installs Nginx with the stipulated guidelines
 
-sudo apt-get updates
+sudo apt-get updates -y
 sudo apt-get install -y nginx
 
-sudo mkdir /var/www/html
+sudo mkdir -p /var/www/html
 sudo touch /var/www/html/index.html
 sudo echo 'Hello World!' > /var/www/html/index.html
 
