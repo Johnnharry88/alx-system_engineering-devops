@@ -4,6 +4,7 @@
 sudo apt-get  -y updates 
 sudo apt-get install -y nginx
 
+ufw allow 'Nginx HTTP'
 sudo mkdir -p /var/www/html
 sudo touch /var/www/html/index.html
 sudo echo 'Hello World!' > /var/www/html/index.html
