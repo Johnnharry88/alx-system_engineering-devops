@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#script that is used for ubuntu server configuration
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+echo 'Hello World!' | sudo tee /var/www/html/index.html
+rep_string="server_name_ ;\n\trewrite ^\/redirect_me http:\/\/www.google.com permanent;"
+sudo sed -i "s/server_name _;$rep_string/" /etc/nginx/sites-available/default
+sudo service nginx restart
