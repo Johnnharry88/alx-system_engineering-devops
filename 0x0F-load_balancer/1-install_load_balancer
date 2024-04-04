@@ -12,7 +12,7 @@ frontend johnharry-frontend
 	bind *:80
 	mode http
 	default_backend johnharry-backend
-backend johnharry-backnd
+backend johnharry-backend
 	balance roundrobin
 	server 499430-web-01 3.86.13.91:80 check
 	server 499430-web-02 54.173.199.160:80 check
