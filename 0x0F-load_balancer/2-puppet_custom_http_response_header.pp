@@ -9,7 +9,7 @@ exec {'update':
 -> file_line {'http_header':
   path  => '/etc/nginx/nginx.cnf',
   match => 'http {',
-  line  => 'htp {\n\tadd_header X-Served-By \$HOSTNAME}\";",
+  line  => "http {\n\tadd_header X-Served-By \"${HOSTNAME}\";",
 }
 -> exec {'run':
   command => '/usr/sbin/service nginx restart',
