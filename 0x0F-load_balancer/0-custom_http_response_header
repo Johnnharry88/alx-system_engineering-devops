@@ -6,10 +6,7 @@ sudo apt-get install -y nginx
 
 echo 'Hello World!' | sudo tee /var/www/html/index.html
 
-rep_string="server_name _;\n\tadd_header X-Served-By \$HOSTNAME;"
-sudo sed -i "s/server_name _;/$rep_string/" /etc/nginx/sites-enabled/edfault
-
-rep_string="server_name _;\n\trewrite ^\/redirect_me http:\/\/www.google.com permanent;"
+rep_string="server_name _;\n\tadd_header X-Served-By \$HOSTNAME;\n\trewrite ^\/redirect_me http:\/\/www.google.com permanent;"
 sudo sed -i "s/server_name _;/$rep_string/" /etc/nginx/sites-enabled/default
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
