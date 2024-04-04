@@ -5,6 +5,9 @@ exec {'update':
 }
 -> package {'nginx':
   ensure => 'present',
+}
+-> file_line {'http_header':
+  path  => '/etc/nginx/nginx.cnf',
   match => 'http {',
   line  => 'htp {\n\tadd_header X-Served-By \$HOSTNAME}\";",
 }
