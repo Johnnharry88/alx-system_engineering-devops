@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that runs the whoami command on the first argument passed
+# User must be registerd in the system.
+sudo -u "$1" whoami
