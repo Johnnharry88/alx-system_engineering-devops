@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configures Header to display host name
+rep_string="server_name _;\n\tadd_header X-Served-By \$HOSTNAME;"
+sudo sed -o "s/server_name _;/$rep_string/" /etc/nginx/sites-enabled/default
