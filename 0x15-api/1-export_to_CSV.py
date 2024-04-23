@@ -10,18 +10,14 @@ if __name__ == "__main__":
     url = access_url + '/' + id_employee
 
     response = requests.get(url)
-    employee_name = response.json().get('name')
+    user = response.json().get('username')
 
     url_toddo = url + '/todos'
     response = requests.get(url_toddo)
     work = response.json()
-    done = 0
-    task_done = []
-    for task in work:
-        if task.get('completed'):
-            task_done.append(task)
-            done = done + 1
-    print("Employee {} is done wih task ({}/{}):"
-          .format(employee_name, done, len(work)))
-    for task in task_done:
-        print("\t {}".format(task.get('title')))
+
+    with open('{}.csv'.format(id_employee), 'w') as x:
+        for task in work:
+            x.write('"{}","{}","{}","{}"\n'
+                    .format(id_employee, user, task.get('completed'),
+                            task.get('title')))
