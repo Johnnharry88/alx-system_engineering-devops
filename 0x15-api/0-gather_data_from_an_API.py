@@ -1,28 +1,31 @@
 #!/usr/bin/python3
-"""Accessing REST API for empplyee's to do list"""
+"""Accessing a REST API for todo lists of employees"""
 
 import requests
 import sys
 
 
-if __name__ == "__main__":
-    id_employee = sys.argv[1]
-    access_url = "https://jsonplaceholder.typicode.com/users"
-    url = access_url + '/' + id_employee
+if __name__ == '__main__':
+    employee_Id = sys.argv[1]
+    baseUrl = "https://jsonplaceholder.typicode.com/users"
+    url = baseUrl + "/" + employee_Id
 
     response = requests.get(url)
-    employee_name = response.json().get('name')
+    employee_Name = response.json().get('name')
 
-    url_toddo = url + '/todos'
-    response = requests.get(url_toddo)
-    work = response.json()
+    todoUrl = url + "/todos"
+    response = requests.get(todoUrl)
+    tasks = response.json()
     done = 0
-    task_done = []
-    for task in work:
+    done_tasks = []
+
+    for task in tasks:
         if task.get('completed'):
-            task_done.append(task)
-            done = done + 1
+            done_tasks.append(task)
+            done += 1
+
     print("Employee {} is done with tasks({}/{}):"
-          .format(employee_name, done, len(work)))
-    for task in task_done:
+          .format(employee_Name, done, len(tasks)))
+
+    for task in done_tasks:
         print("\t {}".format(task.get('title')))
