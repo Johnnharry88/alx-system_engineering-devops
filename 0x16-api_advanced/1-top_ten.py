@@ -19,7 +19,7 @@ def top_ten(subreddit):
     url_x = 'https://www.reddit.com/r/{}/hot/.json'.format(subreddit)
 
     response = get(url_x, headers=def_agent, params=param)
-    res = response.jsnn()
+    res = response.json()
 
     try:
         data = res.get('data').get('children')
