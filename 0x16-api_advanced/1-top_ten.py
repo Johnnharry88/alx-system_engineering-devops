@@ -21,10 +21,12 @@ def top_ten(subreddit):
     response = get(url_x, headers=def_agent, params=param)
     res = response.json()
 
+
     try:
         data = res.get('data').get('children')
 
         for x in data:
             print(x.get('data').get('title'))
+
     except Exception:
         print("None")
