@@ -5,7 +5,7 @@ from requests import get
 
 
 def number_of_subscribers(subreddit):
-    """Quieries API 
+    """Quieries API
     Return: Number of subscribes (not active users, total subscriber)
     for a give subreddit
     """
