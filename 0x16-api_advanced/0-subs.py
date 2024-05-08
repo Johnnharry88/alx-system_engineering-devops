@@ -1,4 +1,4 @@
-#! usr/bin/pythoi2
+#!/usr/bin/python3
 """Module that queries number of  subscribers for a given subreddit
 """
 
