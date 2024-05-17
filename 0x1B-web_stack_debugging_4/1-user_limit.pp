@@ -1,4 +1,4 @@
-manuscript enables  user holberton to login and open files with no error
+# manuscript enables  user holberton to login and open files with no error
 
 # Increase hard file limit for user holberton
 exec { 'increase-hard-file-limit-for-holberton-user':
